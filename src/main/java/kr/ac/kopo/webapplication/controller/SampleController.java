@@ -22,7 +22,7 @@ public class SampleController {
 
     }
 
-    @GetMapping({"/ex2", "/ex2_1", "exBlock", "exLink"})
+    @GetMapping({"/ex2", "/ex2_1", "/exBlock", "/exLink"})
     public void exModel(Model model) {
         List<SampleDTO> list = IntStream.rangeClosed(1,20).asLongStream().mapToObj(i -> {
             SampleDTO dto = SampleDTO.builder()
@@ -52,7 +52,7 @@ public class SampleController {
         return "redirect:/sample/ex3";
     }
 
-    @GetMapping("/ex3")
+    @GetMapping({"/ex3", "/exLayout1"})
     public void ex3() {
 
     }
