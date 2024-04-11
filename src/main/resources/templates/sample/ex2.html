@@ -10,6 +10,7 @@
     </style>
 </head>
 <body>
+<!--에러나는 파일-->
     <ul>
         <li th:each="dto, state : ${list}" th:class="${dto.sno % 5 == 0} ? 'target'">
             [[${state.count}]] : [[${dto}]]
